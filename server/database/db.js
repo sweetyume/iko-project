@@ -1,4 +1,4 @@
-const { Client } = require('pg');
+import { Client } from 'pg';
 
 const client = new Client({
     host: 'localhost',
@@ -8,10 +8,8 @@ const client = new Client({
     password: ''
 });
 
-client.connect((err) => {
-        console.log('connection error', err)
-});
-
-client.connect();
+(async () => {
+    await client.connect();
+})();
 
 export default client;
