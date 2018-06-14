@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "babel-node server/server.js",
-    "dev": "nodemon --exec --watch server server.js babel --presets=env"
+    "dev": "nodemon --exec --watch server server.js babel --presets=env",
+    "babel": "npx babel server/server.js --watch--out file dist/compile.js"
   },
   "repository": {
     "type": "git",
